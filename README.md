@@ -2,5 +2,7 @@
 CS 351 Project Repo
 Green Potatoes - Movie Reviews
 
-The website has ratings for movies based on the average Good Potato and Green Potato rating
+The website has ratings for movies based on the average Good Potato and Green Potato rating.
+There are sample reviews manually scraped from the internet.
 There is a webpage for adding movie reviews, however the functionality is not implemented since github does not allow for server actions to update the backend.
+
