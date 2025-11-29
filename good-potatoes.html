@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Good Potatoes - Green Potatoes</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <main class="landing-container">
+        
+        <header class="site-header">
+            <a href="index.html" class="home-link">
+                <h1 class="logo">🥔 Good Potatoes 🥔</h1>
+                <p class="subtitle">Extremely Watchable Movies</p>
+            </a>
+            <nav class="header-nav">
+                <a href="review.html" class="review-btn">Write a Review</a>
+            </nav>
+        </header>
+
+        <div id="movie-list" class="movie-list-container">
+            </div>
+
+        <footer>
+            <p> Ashoka Deskins - CS 351</p>
+        </footer>
+
+    </main>
+
+    <script src="data.js"></script>
+    <script src="script.js"></script>
+
+    <script>
+        // 1. Get processed data
+        const allMovies = getProcessedMovies();
+
+        // 2. Filter ONLY "Good Potato" movies
+        const goodMovies = allMovies.filter(movie => movie.type === "Good Potato");
+
+        // 3. Select the container
+        const container = document.getElementById('movie-list');
+
+        // 4. Generate HTML
+        if (goodMovies.length === 0) {
+            container.innerHTML = "<p>No good potatoes found yet!</p>";
+        } else {
+            goodMovies.forEach(movie => {
+                // Create a div for the card
+                const card = document.createElement('div');
+                card.className = 'movie-card';
+
+                // Build the reviews HTML list
+                const reviewsHTML = movie.reviews.map(r => {
+                    // Pick the right icon based on score (1 = Good, 0 = Green)
+                    const iconFile = (r.score === 1) ? 'potato.png' : 'greenpotato.png';
+                    
+                    // if text empty, just show nothing next to the potato
+                    const textDisplay = (r.text) ? `"${r.text}"` : "";
+
+                    return `
+                        <div class="review-item">
+                            <img src="${iconFile}" class="mini-potato"> 
+                            ${textDisplay}
+                        </div>
+                    `;
+                }).join('');
+
+                card.innerHTML = `
+                    <img src="${movie.image}" alt="${movie.title}" class="movie-poster">
+                    <div class="movie-info">
+                        <div class="movie-header">
+                            <div class="movie-title">${movie.title}</div>
+                            <div class="potato-badge">${movie.score}%</div>
+                        </div>
+                        <p class="movie-desc">${movie.description}</p>
+                        
+                        <div class="review-section">
+                            <div class="review-title">Viewer Reviews</div>
+                            ${reviewsHTML}
+                        </div>
+                    </div>
+                `;
+
+                container.appendChild(card);
+            });
+        }
+    </script>
+
+</body>
+</html>

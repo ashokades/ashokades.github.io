@@ -1,0 +1,293 @@
+/*Reset*/
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    background-color: #f4f1ea; 
+    color: black; 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+/*Layout Containers*/
+.landing-container {
+    text-align: center;
+    width: 100%;
+    max-width: 900px;
+    padding: 32px; 
+}
+
+/* Header Styling */
+.site-header {
+    margin-bottom: 48px; 
+}
+
+.home-link {
+    text-decoration: none; 
+    color: inherit;        
+    display: inline-block; 
+    cursor: pointer;
+}
+
+.logo {
+    font-size: 56px; 
+    font-weight: 800;
+    color: black;
+    letter-spacing: -1px;
+    margin-bottom: 8px; 
+}
+
+.subtitle {
+    font-size: 20px; 
+    color: black; 
+    font-style: italic;
+}
+
+/*selection cards*/
+.selection-menu {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 24px; 
+}
+
+.card {
+    background: white;
+    border-radius: 12px;
+    padding: 32px; 
+    width: 250px;
+    text-decoration: none;
+    color: black;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+    border: 2px solid transparent; 
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 15px rgba(0,0,0,0.1);
+}
+
+.potato-icon {
+    height: 64px;       
+    width: auto;        
+    margin-bottom: 16px;
+    display: block;     
+    margin-left: auto;  
+    margin-right: auto;
+}
+
+.card h2 {
+    font-size: 19px; 
+    margin-bottom: 8px; 
+}
+
+.card p {
+    font-size: 14px; 
+    color: black;
+}
+
+/* Footer */
+footer {
+    margin-top: 64px; 
+    font-size: 13px; 
+    color: darkgray;
+}
+
+/*Movie List Page Styles*/
+
+.movie-list-container {
+    max-width: 800px;
+    margin: 0 auto;
+    text-align: left;
+}
+
+.movie-card {
+    background: white;
+    border-radius: 12px;
+    padding: 24px;
+    margin-bottom: 24px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+    display: flex;
+    gap: 24px;
+    align-items: flex-start;
+}
+
+.movie-poster {
+    width: 120px;
+    height: auto;
+    border-radius: 8px;
+    flex-shrink: 0;
+}
+
+.movie-info {
+    flex-grow: 1;
+}
+
+.movie-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 12px;
+    border-bottom: 2px solid #f4f1ea;
+    padding-bottom: 12px;
+}
+
+.movie-title {
+    font-size: 24px;
+    font-weight: bold;
+    color: #black;
+}
+
+.potato-badge {
+    background-color: #d4a373; /* Default to Good Potato Color */
+    color: white;
+    padding: 6px 12px;
+    border-radius: 20px;
+    font-weight: bold;
+    font-size: 14px;
+}
+
+.movie-desc {
+    color: #black;
+    margin-bottom: 16px;
+    line-height: 1.5;
+}
+
+/*Review Section Styles*/
+
+.review-section {
+    background-color: #f9f9f9;
+    padding: 12px;
+    border-radius: 8px;
+}
+
+.review-title {
+    font-size: 12px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    color: #black;
+    margin-bottom: 8px;
+}
+
+.review-item {
+    display: flex;      
+    align-items: center;
+    margin-bottom: 6px;
+    font-size: 14px;
+    font-style: italic;
+    color: #black;
+    min-height: 24px;
+}
+
+.mini-potato {
+    width: 20px;        
+    height: auto;
+    vertical-align: middle; 
+    margin-right: 8px;
+}
+
+/*Form & Review Page Styles*/
+
+.form-container {
+    max-width: 600px;
+    margin: 0 auto;
+    background: white;
+    padding: 32px;
+    border-radius: 12px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+    text-align: left;
+}
+
+.form-container h2 {
+    text-align: center;
+    margin-bottom: 24px;
+    color: #2c2c2c;
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+.form-group label {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 8px;
+    color: #2c2c2c;
+}
+
+.form-group input,
+.form-group textarea {
+    width: 100%;
+    padding: 12px;
+    border: 2px solid #ddd;
+    border-radius: 8px;
+    font-size: 16px;
+    font-family: inherit;
+    transition: border-color 0.2s;
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+    border-color: #d4a373; /* Good Potato Gold */
+    outline: none;
+}
+
+.rating-label {
+    text-align: center;
+    margin-bottom: 16px;
+    font-weight: bold;
+}
+
+/* Submission Buttons Layout */
+.submission-options {
+    display: flex;
+    justify-content: center;
+    gap: 16px;
+    margin-bottom: 24px;
+}
+
+/* Modifier to resize the original cards for button use */
+.submit-card {
+    width: 140px;      
+    padding: 16px;     
+    cursor: pointer;   
+    border: 2px solid black;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.submit-card h3 {
+    font-size: 14px;
+    margin: 0;
+}
+
+/* Movie review link*/
+.header-nav {
+    margin-top: 24px; /* Space between slogan and button */
+}
+
+.review-btn {
+    display: inline-block;
+    text-decoration: none;
+    background-color: #2c2c2c; 
+    color: white;
+    padding: 10px 20px;
+    border-radius: 25px;
+    font-weight: bold;
+    font-size: 14px;
+    transition: background-color 0.2s, transform 0.2s;
+}
+
+.review-btn:hover {
+    background-color: #d4a373;
+    transform: translateY(-2px);
+}

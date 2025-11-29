@@ -1,19 +1,52 @@
 <!DOCTYPE html>
-<html lang="en" dir="ltr">
-    <head>
-        <meta charset="utf-8">
-        <title>Green Potatoes - Movie Reviews</title>
-    </head>
-    <body style="background-color: gray;">
-        <h1 style="color: blue; text-align: center;"><b>Green Potatoes</b> </h1>
-        <h2 style="text-align: center;"><b>Movie Reviews</b> </h2>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Green Potatoes - Movie Reviews</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
 
-        <p>Coming Soon</p>
-        <ul>
-            <li><b>HTML</b></li>
-            <li><u>CSS</u></li>
-            <li><i>JavaScript</i></li>
-        </ul>
-    </body>
+    <main class="landing-container">
+        
+        <header class="site-header">
+            <a href="index.html" class="home-link">
+                <h1 class="logo">🥔 Green Potatoes 🥔</h1>
+                <p class="subtitle">Just tell me if I should watch the movie!</p>
+            </a>
 
+            <nav class="header-nav">
+                <a href="review.html" class="review-btn">Write a Review</a>
+            </nav>
+        </header>
+
+        <nav class="selection-menu">
+            
+            <a href="good-potatoes.html" class="card good-potato">
+                <img src="potato.png" alt="Good Potato" class="potato-icon">
+                <h2>Good Potatoes</h2>
+                <p>Extremely Watchable</p>
+            </a>
+
+            <a href="suspicious-potatoes.html" class="card suspicious-potato">
+                <img src="suspotato.png" alt="Suspicious Potato" class="potato-icon">
+                <h2>Suspicious Potatoes</h2>
+                <p>Between Edible and Poison</p>
+            </a>
+
+            <a href="green-potatoes.html" class="card green-potato">
+                <img src="greenpotato.png" alt="Green Potato" class="potato-icon">
+                <h2>Green Potatoes</h2>
+                <p>Extremely Unwatchable</p>
+            </a>
+
+        </nav>
+
+        <footer>
+            <p>Ashoka Deskins - CS 351</p>
+        </footer>
+
+    </main>
+<script src="data.js"></script>    <script src="script.js"></script>
+</body>
 </html>
